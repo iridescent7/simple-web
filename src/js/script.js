@@ -10,8 +10,8 @@ window.addEventListener('scroll', () => {
         let absRelativeY = Math.abs(elementRect.y);
 
         if (absRelativeY <= elementRect.height) {
-            element.style.opacity = 1.0 - (absRelativeY / elementRect.height);
-            element.style.top = Math.round(absRelativeY * 0.25) + 'px';
+            element.style.opacity = 1.0 - Math.round(absRelativeY / elementRect.height * 100) / 100;
+            element.style.top = Math.round(absRelativeY * 0.5) + 'px';
         }
     });
 });
